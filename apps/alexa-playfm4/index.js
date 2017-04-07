@@ -2,7 +2,7 @@ module.change_code = 1;
 'use strict';
 
 var alexa = require('alexa-app');
-var app = new alexa.app('X');
+var app = new alexa.app('playfm4');
 
 
 app.launch(function(request, response) {
@@ -18,16 +18,23 @@ app.error = function(exception, request, response) {
 };
 
 
-app.intent('Y', {
+app.intent('PlayMusic', {
     "slots": {
-      ""
+      "" : ""
     },
     "utterances": [
-      "",
+      ""
     ]
 }, function(request, response) {
 
 
 });
+
+app.intent('AMAZON.StopIntent', {
+    "slots": {}
+}, function(request, response) {
+    response.say("Good bye. See you soon!").shouldEndSession(true);
+   });
+
 
 module.exports = app;

@@ -1,6 +1,6 @@
 'use strict';
 
-var AlexaAppServer = require( 'X' );
+var AlexaAppServer = require( 'alexa-app-server' );
 
 var server = new AlexaAppServer( {
 	httpsEnabled: false,
